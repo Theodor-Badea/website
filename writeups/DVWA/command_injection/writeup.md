@@ -1,7 +1,8 @@
+<!--TODO add metadata-->
 # Security Level - Low
 We see a tool to ping devices
 
-<!-- TODO insert photo -->
+![ping](../../../public/images/DVWA/command_injection/ping.png)
 
 We send a normal payload, eg: 127.0.0.1 and see that it behaves like the linux ping command
 
