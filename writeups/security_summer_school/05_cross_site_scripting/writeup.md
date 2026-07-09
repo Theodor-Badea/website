@@ -1,15 +1,11 @@
 # Course 05 - Cross Site Scripting
 
-TODO
-- [x] future club
-- [x] miami disco
-- [x] retrogenesis
-- [ ] tactical precision
-- [x] good complex
+Generic payload
 
 ```javascript
 <script>alert(document.cookie)</script>
 ```
+--- 
 
 # Miami disco
 The webiste stored data in an XML file, after searching xml xss payloads we find
@@ -39,7 +35,7 @@ Modified the request with burp (since there was a lenght limit) and added the pa
 
 Managed to create an XSS, but can't see the flag cookie, will try again tomorrow
 
-
+---
 
 # Retrogenesis
 First labeled each input field and looked at the request
@@ -81,8 +77,11 @@ Set-Cookie: flag="SSS{retr0_music_for_the_masses}"; HttpOnly; Path=/; SameSite=L
 Set-Cookie: csrftoken=8XXxua2QKrKvwzYoW1y4oWQfBMH1rSIqo2Hdh1zlYo2bBQM6FVaSqZCcD4lF1NJY; expires=Tue, 06 Jul 2027 16:49:54 GMT; Max-Age=31449600; Path=/; SameSite=Lax
 ```
 
+```txt
 SSS{retr0_music_for_the_masses}
+```
 
+---
 
 # Future Club
 We find some javascript code in the page source
@@ -153,6 +152,8 @@ Then I intercepted the response with burp and got
 ```
 Set-Cookie: flag="SSS{future_club_obfuscation}"; HttpOnly;
 ```
+
+---
 
 # The GOD COMPLEX
 After sending multiple payloads we see that it creates the XML entry part by part
