@@ -85,11 +85,13 @@ For the password list I have used rockyou.txt and for names tired multiple from 
 
 Firt I tried looking for the name, sorting the responses by their lenght we find that it's abel (since the server responded with " Wrong password! " instead of " Invalid credentials! ")
 
-<!--TODO insert username photo-->
+![username_brute_force](../../../public/images/security_summer_school/06_enumeration_and_recon/search_name.png)
+
+![username_found](../../../public/images/security_summer_school/06_enumeration_and_recon/found_username.png)
 
 It was abel, now we move to the password
 
-<!-- TODO insert caido image -->
+![password_brute_search](../../../public/images/security_summer_school/06_enumeration_and_recon/search_password.png)
 
 After sorting the results by lenght we discover the username and password combination is
 ```bash
@@ -100,6 +102,3 @@ abel:whatever
 SSS{always_choose_a_strong_password}
 ```
 
-
-# DVWA
-# GINANDJUICE.SHOP
