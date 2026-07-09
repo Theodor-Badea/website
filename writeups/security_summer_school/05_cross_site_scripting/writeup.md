@@ -25,7 +25,11 @@ But it's too long so we make it
 
 And we get the flag
 
+```txt
 SSS{miami_hot_number}
+```
+
+---
 
 # Tactical precision Dissaray
 Modified the request with burp (since there was a lenght limit) and added the payload in field 1
