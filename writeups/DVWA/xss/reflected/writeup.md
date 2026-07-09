@@ -1,9 +1,10 @@
+<!--TODO add metadata-->
 # Security Level - Low
 We see a form that asks for our name
 
-<!--TODO insert screenshot-->
+![form](../../../../public/images/DVWA/xss_reflected/name_input.png)
 
-And updates the page with that name
+And updates the page with it
 
 ```html
 <pre>Hello Theo</pre>
@@ -14,4 +15,4 @@ After trying an XSS payload we get the alert
 <script>alert("You have been Hacked")</script>
 ```
 
-<!--TODO add a screenshot with the alert-->
+![hacked](../../../../public/images/DVWA/xss_reflected/hacked.png)
