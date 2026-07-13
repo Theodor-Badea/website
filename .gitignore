@@ -1,3 +1,9 @@
 # Ignore the Midterm CTF
 writeups/security_summer_school/ctf_midterm/
 public/images/security_summer_school/ctf_midterm/
+
+# Ignore inspo dir
+inspo/
+
+# Ignore unsolved rooms
+writeups/try_hack_me/set/
