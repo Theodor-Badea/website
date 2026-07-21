@@ -1,4 +1,4 @@
-# Course 06 - Enumeration & Recon
+# Lab 06 - Enumeration & Recon
 
 ---
 

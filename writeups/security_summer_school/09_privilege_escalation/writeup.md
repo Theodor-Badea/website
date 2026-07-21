@@ -1,4 +1,4 @@
-# 09 - Privilege Escalation
+# Lab 09 - Privilege Escalation
 
 | Drill Name | Port | Username | Password |
 | :--- | :--- | :--- | :--- |

@@ -1,3 +1,5 @@
+# Lab 02: Sessions
+
 # Beep Beep Boop
 Using dirsearch shows robots.txt which disallows an interesting page
 ```txt

@@ -1,4 +1,4 @@
-# Course 05 - Cross Site Scripting
+# Lab 05 - Cross Site Scripting
 
 Generic payload
 

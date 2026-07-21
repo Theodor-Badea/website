@@ -1,4 +1,4 @@
-# Course #3
+# Lab 03: Securing Communication
 # Inspect me PEM
 We inspect the certificate
 ```bash

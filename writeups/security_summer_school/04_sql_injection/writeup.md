@@ -1,4 +1,4 @@
-# Course 4: SQL Injection
+# Lab 04: SQL Injection
 
 # Demo
 Find the databases
