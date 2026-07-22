@@ -192,7 +192,7 @@ We move to the login page, http://mrrobot.thm/wp-login, we enter random values a
 
 ![username_error](../.../../../public/images/try_hack_me/mr_robot_ctf/username_error.png)
 
-The file is really long, because it has a lot of duplicate entries, lets fix that
+The file is really long, because it has a lot of duplicate entries, let's fix that
 ```bash
 sort fsocity.dic | uniq -d | wc
   11441   11441   96591
@@ -255,7 +255,7 @@ First we need a better shell
 python3 -c 'import pty; pty.spawn("/bin/bash")'
 ```
 
-Lets view /home/robot, there we find the md5 hash of his password
+Let's view /home/robot, there we find the md5 hash of his password
 ```bash
 daemon@ip-10-114-152-0:/home/robot$ ls -l
 ls -l
