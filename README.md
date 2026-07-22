@@ -9,5 +9,6 @@ TODO
 - [ ] create structure for writeups, recon, exploit, post exploit, etc...
 - [ ] add metadata to files 
 - [ ] add structure
+- [ ] writeup for my own CTF
 -->
 
