@@ -98,7 +98,7 @@ smb: \logs\> get log3.txt
 getting file \logs\log3.txt of size 0 as log3.txt (0.0 KiloBytes/sec) (average 1.3 KiloBytes/sec)
 ```
 
-Lets read those files (log2, and log3 are empty)
+Let's read those files (log2, and log3 are empty)
 ```bash
 cat attention.txt
 A recent system malfunction has caused various passwords to be changed. All skynet employees are required to change their password after seeing this.
@@ -138,7 +138,7 @@ Walterminator
 1996terminator
 ```
 
-Could be useful for bruteforcing SSH credentials, but first lets fire gobuster and take a look at the website
+Could be useful for bruteforcing SSH credentials, but first let's fire gobuster and take a look at the website
 ```bash
 gobuster dir -u http://skynet.thm/ -w /usr/share/wordlists/seclists/Discovery/Web-Content/DirBuster-2007_directory-list-2.3-medium.txt -t 100 -x txt,php,html,bak,zip,log -k
 ===============================================================

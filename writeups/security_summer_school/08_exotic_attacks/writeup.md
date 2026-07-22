@@ -91,7 +91,7 @@ We submit some random values and observe how the URL changes to http://sss.upb:8
  Warning: preg_replace(): No ending delimiter '/' found in /var/www/html/index.php on line 8
 ```
 
-Lets look at some example usages of preg_replace()
+Let's look at some example usages of preg_replace()
 ```php
 <?php
 $string = 'April 15, 2003';
@@ -364,7 +364,7 @@ drwxr-xr-x 1 root     root     4096 Dec 11  2020 ..
 drwxrwxrwx 1 root     root     4096 Jul 16 09:58 uploads
 ```
 
-Now lets read it by repeating the steps with a new payload
+Now let's read it by repeating the steps with a new payload
 ```php
 <?php echo system("cat /var/www/html/flag.txt"); ?>
 ```

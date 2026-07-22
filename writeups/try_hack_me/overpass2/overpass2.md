@@ -14,7 +14,7 @@ Overpass has been hacked! The SOC team (Paradox, congratulations on the promotio
 Can you work out how the attacker got in, and hack your way back into Overpass' production server?
 ```
 
-We have a PCAP file, lets take a look at it
+We have a PCAP file, let's take a look at it
 
 ## What was the URL of the page they used to upload a reverse shell?
 We find this POST request 

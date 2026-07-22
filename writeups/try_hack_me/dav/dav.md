@@ -51,7 +51,7 @@ PORT   STATE SERVICE REASON  VERSION
 |_http-server-header: Apache/2.4.18 (Ubuntu)
 ```
 
-Now lets look at the files on the server. For this I am using gobuster
+Now let's look at the files on the server. For this I am using gobuster
 ```bash
 gobuster dir -u http://dav.thm/ -w /usr/share/wordlists/seclists/Discovery/Web-Content/DirBuster-2007_directory-list-2.3-medium.txt -t 10 -x txt,php,html,bak,zip,log
 ```
