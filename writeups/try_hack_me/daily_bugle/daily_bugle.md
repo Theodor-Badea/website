@@ -210,7 +210,7 @@ chmod +x pspy64
 ./pspy64
 ```
 
-Lets take a look at configuration.php
+Let's take a look at configuration.php
 ```php
 <?php
 	public $user = 'root';
@@ -246,7 +246,7 @@ apache:x:48:48:Apache:/usr/share/httpd:/sbin/nologin
 mysql:x:27:27:MariaDB Server:/var/lib/mysql:/sbin/nologin
 ```
 
-Now lets change users
+Now let's change users
 ```bash
 su jjameson
 nv5uz9r3ZEDzVjNu
@@ -274,7 +274,7 @@ user.txt
 ```
 
 ## What is the root flag?
-Lets see what we can run with sudo
+Let's see what we can run with sudo
 ```bash
 [jjameson@dailybugle ~]$ sudo -l
 Matching Defaults entries for jjameson on dailybugle:
