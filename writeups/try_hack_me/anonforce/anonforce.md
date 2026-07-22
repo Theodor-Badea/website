@@ -99,7 +99,7 @@ I've tried to import the key, but it requires a passphrase
 gpg --import private.asc
 ```
 
-John is the perfect tool for this. First we tranform the key in a format john understands, then start brute forcing it
+John is the perfect tool for this. First we tranform the key into a format john understands, then start brute forcing it
 ```bash
 $ gpg2john  private.asc > pgp.hash
 $ john pgp.hash --wordlist=/usr/share/wordlists/rockyou.txt
@@ -152,7 +152,7 @@ gpg: encrypted with elg512 key, ID AA6268D1E6612967, created 2019-08-12
 
 We can view its content now, looks like we got the /etc/passwd file
 ```bash
-$ cat  backup.tar
+$ cat  backup.txt
 root:$6$07nYFaYf$F4VMaegmz7dKjsTukBLh6cP01iMmL7CiQDt1ycIm6a.bsOIBp0DwXVb9XI2EtULXJzBtaMZMNd2tV4uob5RVM0:18120:0:99999:7:::
 daemon:*:17953:0:99999:7:::
 bin:*:17953:0:99999:7:::
