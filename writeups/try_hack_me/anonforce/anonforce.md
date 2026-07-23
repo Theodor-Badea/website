@@ -3,6 +3,7 @@
 Name: Anonforce
 Difficulty: Easy 
 URL: https://tryhackme.com/room/bsidesgtanonforce
+Description: 
 
 ---
 
