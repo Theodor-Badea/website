@@ -3,7 +3,8 @@
 Name: Internal
 Difficulty: Hard
 URL: https://tryhackme.com/room/internal
-
+Category: "TryHackMe"
+Description: "A hands-on TryHackMe walkthrough for Solution, covering the approach and key findings."
 ---
 
 # Solution

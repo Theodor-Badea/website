@@ -3,7 +3,8 @@
 Name: Daily Bugle
 Difficulty: Hard
 URL: https://tryhackme.com/room/dailybugle
-
+Category: "TryHackMe"
+Description: "A hands-on TryHackMe walkthrough for Solution, covering the approach and key findings."
 ---
 
 <!--

@@ -5,7 +5,7 @@ Difficulty: Medium
 URL: http://141.85.224.102:8080/
 Lab: SSS - lab 10
 Category: SSS
-
+Description: "A hands-on Security Summer School walkthrough for Walker, covering the approach and key findings."
 ---
 
 Using nmap reveals that the server is using Apache 2.4.49

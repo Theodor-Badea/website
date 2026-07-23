@@ -1,4 +1,9 @@
-<!--TODO add metadata-->
+---
+Name: "Security Level - Low"
+Category: "DVWA"
+Description: "A hands-on DVWA walkthrough for Security Level - Low, covering the approach and key findings."
+---
+
 # Security Level - Low
 We see a form which searches for users using their ID
 

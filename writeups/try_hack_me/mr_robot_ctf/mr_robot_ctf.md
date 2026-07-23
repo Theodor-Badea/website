@@ -3,7 +3,8 @@
 Name: Mr Robot CTF
 Difficulty: Medium
 URL: https://tryhackme.com/room/mrrobot
-
+Category: "TryHackMe"
+Description: "A hands-on TryHackMe walkthrough for Solution, covering the approach and key findings."
 ---
 
 # Solution

@@ -4,7 +4,7 @@ Name: UltraTech
 Difficulty: Medium
 URL: https://tryhackme.com/room/ultratech1
 Description: The basics of Penetration Testing, Enumeration, Privilege Escalation and WebApp testing. You have been contracted by UltraTech to pentest their infrastructure. It is a grey-box kind of assessment, the only information you have is the company's name and their server's IP address.
-
+Category: "TryHackMe"
 ---
 
 # It's enumeration time

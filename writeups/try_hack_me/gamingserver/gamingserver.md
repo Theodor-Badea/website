@@ -3,7 +3,8 @@
 Name: Gaming Server
 Difficulty: Easy
 URL: https://tryhackme.com/room/gamingserver
-
+Category: "TryHackMe"
+Description: "A hands-on TryHackMe walkthrough for Solution, covering the approach and key findings."
 ---
 
 # Solution

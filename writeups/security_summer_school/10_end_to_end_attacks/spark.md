@@ -4,7 +4,8 @@ Name: Spark
 Difficulty: Medium
 URL: http://141.85.224.102:8081/
 Lab: SSS - lab 10
-
+Category: "Security Summer School"
+Description: "A hands-on Security Summer School walkthrough for cowsay++, covering the approach and key findings."
 ---
 
 First we look at what the server offers

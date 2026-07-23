@@ -3,7 +3,8 @@
 Name: Cyborg
 Difficulty: Easy
 URL: https://tryhackme.com/room/cyborgt8
-
+Category: "TryHackMe"
+Description: "A hands-on TryHackMe walkthrough for Solution, covering the approach and key findings."
 ---
 
 # Solution

@@ -16,6 +16,7 @@ export interface Writeup {
   categorySlug: string;
   difficulty?: string | null;
   url?: string | null;
+  description?: string | null;
   excerpt: string;
   readTime: string;
   filePath: string;
@@ -186,8 +187,9 @@ function parseWriteupFile(filePath: string, relativePath: string): Writeup | nul
 
     const difficulty = data.Difficulty || data.difficulty || null;
     const url = data.URL || data.url || null;
+    const description = data.Description || data.description || null;
 
-    const excerpt = extractExcerpt(content);
+    const excerpt = description || extractExcerpt(content);
     const readTime = calculateReadTime(content);
     const toc = extractTOC(content);
 
@@ -199,6 +201,7 @@ function parseWriteupFile(filePath: string, relativePath: string): Writeup | nul
       categorySlug: categoryFolder,
       difficulty,
       url,
+      description,
       excerpt,
       readTime,
       filePath,
@@ -274,7 +277,11 @@ export function getAllWriteups(): Writeup[] {
       
       if (entry.isDirectory()) {
         walk(fullPath, baseDir);
-      } else if (entry.isFile() && entry.name.endsWith('.md')) {
+      } else if (
+        entry.isFile() &&
+        entry.name.endsWith('.md') &&
+        entry.name.toLowerCase() !== 'readme.md'
+      ) {
         const relPath = path.relative(baseDir, fullPath);
         const parsed = parseWriteupFile(fullPath, relPath);
         if (parsed) {

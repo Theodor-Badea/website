@@ -4,7 +4,8 @@ Name: WSO
 Difficulty: Medium
 URL: http://141.85.224.106:9443/
 Lab: SSS - lab 10
-
+Category: "Security Summer School"
+Description: "A hands-on Security Summer School walkthrough for Wso, covering the approach and key findings."
 ---
 
 ```bash

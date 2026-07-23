@@ -3,7 +3,8 @@
 Name: Corp Website
 Difficulty: Medium
 URL: https://tryhackme.com/room/lafb2026e7
-
+Category: "TryHackMe"
+Description: "A hands-on TryHackMe walkthrough for Solution, covering the approach and key findings."
 ---
 
 # Solution

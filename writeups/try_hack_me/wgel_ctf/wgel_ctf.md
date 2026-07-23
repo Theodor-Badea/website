@@ -3,7 +3,8 @@
 Name: Wgel CTF
 Difficulty: Easy
 URL: https://tryhackme.com/room/wgelctf
-
+Category: "TryHackMe"
+Description: "A hands-on TryHackMe walkthrough for Solution, covering the approach and key findings."
 ---
 
 # Solution

@@ -4,7 +4,8 @@ Name: Decryptify
 Difficulty: Medium 
 URL: https://tryhackme.com/room/decryptify
 Tags: Linux, Web
-
+Category: "TryHackMe"
+Description: "A hands-on TryHackMe walkthrough for 0. Setup, covering the approach and key findings."
 ---
 
 # 0. Setup

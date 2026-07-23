@@ -5,7 +5,6 @@ Difficulty: Easy
 URL: https://tryhackme.com/room/osintchallengeiv
 Description: Beginner friendly OSINT Challenge
 Category: THM
-
 ---
 
 # The Leaked Photo

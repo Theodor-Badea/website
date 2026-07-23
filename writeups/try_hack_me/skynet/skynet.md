@@ -3,7 +3,8 @@
 Name: Skynet
 Difficulty: Easy
 URL: https://tryhackme.com/room/skynet
-
+Category: "TryHackMe"
+Description: "A hands-on TryHackMe walkthrough for Solution, covering the approach and key findings."
 ---
 
 <!-- TODO - decide if setup is needed -->

@@ -3,7 +3,8 @@
 Name: Overpass 2
 Difficulty: Easy
 URL: https://tryhackme.com/room/overpass2hacked
-
+Category: "TryHackMe"
+Description: "A hands-on TryHackMe walkthrough for Task 1: Forensics - Analyse the PCAP, covering the approach and key findings."
 ---
 
 # Task 1: Forensics - Analyse the PCAP

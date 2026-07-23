@@ -3,7 +3,8 @@
 Name: Dav
 Difficulty: Easy
 URL: https://tryhackme.com/room/bsidesgtdav
-
+Category: "TryHackMe"
+Description: "A hands-on TryHackMe walkthrough for 0. Setup, covering the approach and key findings."
 ---
 
 # 0. Setup
