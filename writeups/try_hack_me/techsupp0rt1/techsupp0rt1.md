@@ -1,6 +1,6 @@
 ---
 
-Name: Tech_Supp0rt: 1
+Name: Tech_Supp0rt 1
 Difficulty: Easy
 URL: https://tryhackme.com/room/techsupp0rt1
 
