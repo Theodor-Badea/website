@@ -10,6 +10,8 @@ writeups/try_hack_me/set/
 writeups/try_hack_me/ironhold/
 writeups/try_hack_me/billing/
 writeups/try_hack_me/dogcat/
+writeups/try_hack_me/mKingdom/ 
+# TODO - solve mKingdom
 
 # dependencies
 /node_modules
@@ -46,3 +48,6 @@ todo.txt
 
 # structure
 struct.txt
+
+# templates
+writeups/template.md
