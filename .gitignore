@@ -1,6 +1,7 @@
-# Ignore the Midterm CTF
+# Ignore the Midterm & Final CTF
 writeups/security_summer_school/ctf_midterm/
 public/images/security_summer_school/ctf_midterm/
+writeups/security_summer_school/ctf_final/
 
 # Ignore inspo dir
 inspo/
@@ -12,6 +13,8 @@ writeups/try_hack_me/billing/
 writeups/try_hack_me/dogcat/
 writeups/try_hack_me/mKingdom/ 
 # TODO - solve mKingdom
+writeups/try_hack_me/publisher/ 
+writeups/try_hack_me/cheese_ctf/ 
 
 # dependencies
 /node_modules
