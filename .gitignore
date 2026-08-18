@@ -17,6 +17,13 @@ writeups/try_hack_me/publisher/
 writeups/try_hack_me/cheese_ctf/ 
 writeups/try_hack_me/signed_messages/ 
 
+# day 13 and 14 from HH 2026
+writeups/try_hack_me/hacker_holidays_2026/day_13/
+writeups/try_hack_me/hacker_holidays_2026/day_14/
+
+# Hacksmarter, AWS
+writeups/hack_smarter/DEFCON_CTF/aws/
+
 # Ignore the template
 writeups/template.md
 
